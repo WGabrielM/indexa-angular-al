@@ -1,6 +1,8 @@
 <app-container>
   <app-header />
 
+  <input type="search" placeholder="Type for search" [(ngModel)]="filterByText">
+
   @for (letter of alphabet; track letter) {
     <app-splitter>
       {{ letter}}
