@@ -5,6 +5,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SplitterComponent } from "./components/splitter/splitter.component";
 import { ContactComponent } from "./components/contact/contact.component";
 
+interface Contact {
+  id: number
+  name: string
+  telephone: string
+}
+
+import agenda from './angenda.json'
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,4 +22,11 @@ import { ContactComponent } from "./components/contact/contact.component";
 })
 export class AppComponent {
   alphabet: string = 'abcdefghijklmnopqrstuvwxyz'
+  contacts: Contact[] = agenda;
+
+  filterContactsByInitialLetter(letter: string): Contact[] {
+    return this.contacts.filter(contact => {
+      return contact.name.toLowerCase().startsWith(letter)
+    })
+  }
 }
