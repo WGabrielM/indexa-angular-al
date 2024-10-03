@@ -1,0 +1,11 @@
+h2 {
+  color: #0D6EFD;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  font-style: normal;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #0D6EFD;
+}

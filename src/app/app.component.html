@@ -1,1 +1,11 @@
-<h1>{{title}}</h1>
+<app-container>
+  <app-header />
+
+  @for (letter of alphabet; track letter) {
+    <app-splitter>
+      {{ letter}}
+    </app-splitter>
+
+  }
+
+</app-container>
